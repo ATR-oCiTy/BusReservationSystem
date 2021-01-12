@@ -1,0 +1,39 @@
+{% extends 'myapp/base.html' %}
+{% block content %}
+
+<div class="container">
+    <h2 class=''>Available buses</h2>
+    <div class="border border-primary rounded p-2">
+    <table class="table table-success table-striped">
+        <thead>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>SOURCE</th>
+            <th>DESTINATION</th>
+            <th>NUM OF SEATS</th>
+            <th>NUM OF SEATS REM</th>
+            <th>PRICE</th>
+            <th>DATE</th>
+            <th>TIME</th>
+
+        </thead>
+
+        {% for row in bus_list %}
+        <tr>
+            <td>{{row.id }}</td>
+            <td>{{row.bus_name}}</td>
+            <td>{{row.source}}</td>
+            <td>{{row.dest}}</td>
+            <td>{{row.nos}}</td>
+            <td>{{row.rem}}</td>
+            <td>{{row.price}}</td>
+            <td>{{row.date}}</td>
+            <td>{{row.time}}</td>
+
+
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+</div>
+{% endblock %}
