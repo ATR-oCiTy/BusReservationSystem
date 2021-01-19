@@ -36,8 +36,8 @@
 </table>
 <div class="card container" style="max-width: 540px; padding-right: 0%;">
 <form action="{% url 'cancellings' %}" method="post">
-    <h3 class='text-center'>Cancel by BookingID</h3>
     {% csrf_token %}
+    <h3 class='text-center'>Cancel by BookingID</h3>
     <div class="col-auto">
         <label for="example-email-input" class="col-2 col-form-label">Bus ID</label>
         <div class="col-9">

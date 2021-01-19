@@ -5,8 +5,8 @@
         <div class="row">
             <div class="col-sm-6 mx-auto" style="margin-top: 70px">
                 <form action="{% url 'signup' %}" method="post">
-                    <h2>SignUp</h2>
                     {% csrf_token %}
+                    <h2>SignUp</h2>
                     <div class="form-group row">
                         <label for="example-email-input" class="col-2 col-form-label">Email</label>
                         <div class="col-10">
